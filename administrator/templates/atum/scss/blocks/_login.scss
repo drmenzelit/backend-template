@@ -207,6 +207,15 @@
 
     @include media-breakpoint-down(sm) {
       flex-wrap: wrap;
+      display:flex !important;
+    }
+  }
+
+  .header{
+    .logo{
+      &.small{
+        line-height: 2.5rem;
+      }
     }
   }
 }
@@ -238,3 +247,10 @@ label {
   color: var(--atum-text-light);
 }
 
+.view-login{
+  #wrapper.d-flex{
+      @include media-breakpoint-down(sm) {
+        display:flex !important;
+     }
+  }
+}
