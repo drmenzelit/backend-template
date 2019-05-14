@@ -57,6 +57,14 @@
 				/>
 
 				<field
+					name="moduletitle_icon"
+					type="tex"
+					default="fa-user-check"
+					label="COM_MODULES_FIELD_MODULETITLE_ICON_LABEL"
+					rows="3"
+				/>
+
+				<field
 					name="automatic_title"
 					type="radio"
 					label="COM_MODULES_FIELD_AUTOMATIC_TITLE_LABEL"

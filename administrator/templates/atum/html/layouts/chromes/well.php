@@ -35,6 +35,7 @@ if ($module->content) :
 	// Temporarily store header class in variable
 	$headerClass = $params->get('header_class');
 	$headerClass = ($headerClass) ? ' ' . htmlspecialchars($headerClass) : '';
+	$headerIcon = $params->get('moduletitle_icon');
 	?>
 	<div class="module-wrapper">
 		<<?php echo $moduleTag; ?> class="card mb-3<?php echo $moduleClassSfx; ?>">
@@ -60,7 +61,10 @@ if ($module->content) :
 			<?php endif; ?>
 
 			<?php if ($module->showtitle) : ?>
-				<h2 class="card-header<?php echo $headerClass; ?>"><?php echo $module->title; ?></h2>
+				<h2 class="card-header<?php echo $headerClass; ?>">
+					<span class="fa <?php echo htmlspecialchars($headerIcon); ?> mr-1" aria-hidden="true"></span>
+					<?php echo $module->title; ?>
+				</h2>
 			<?php endif; ?>
 
 			<?php echo $module->content; ?>
