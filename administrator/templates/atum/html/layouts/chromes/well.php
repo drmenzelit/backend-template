@@ -35,7 +35,7 @@ if ($module->content) :
 	// Temporarily store header class in variable
 	$headerClass = $params->get('header_class');
 	$headerClass = ($headerClass) ? ' ' . htmlspecialchars($headerClass) : '';
-	$headerIcon = $params->get('moduletitle_icon');
+	$headerIcon = $params->get('moduletitle_icon', '');
 	?>
 	<div class="module-wrapper">
 		<<?php echo $moduleTag; ?> class="card mb-3<?php echo $moduleClassSfx; ?>">
